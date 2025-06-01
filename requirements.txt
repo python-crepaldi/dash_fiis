@@ -1,0 +1,11 @@
+streamlit
+yfinance
+pandas
+numpy
+plotly.graph_objects
+plotly.express
+date
+bcb
+holidays
+Scikit-Learn 
+feedparser
