@@ -3,7 +3,7 @@ yfinance
 pandas
 numpy
 plotly
-datetme
+python-dateutil
 bcb
 holidays
 Scikit-Learn 
