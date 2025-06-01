@@ -4,7 +4,7 @@ pandas
 numpy
 plotly
 python-dateutil
-bcb
-holidays
-Scikit-Learn 
+python-bcb
+python-holidays
+scikit-learn 
 feedparser
