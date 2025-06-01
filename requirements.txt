@@ -2,8 +2,7 @@ streamlit
 yfinance
 pandas
 numpy
-plotly.graph_objects
-plotly.express
+plotly
 date
 bcb
 holidays
