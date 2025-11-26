@@ -280,7 +280,7 @@ def dash_operacional():
 
     st.markdown('---')
     # Gráfico de Linha do Preço com Média Móvel
-    preco= yf.download(ticker_selecionado + '.SA', end=date.today())  # Obtendo o preço de fechamento
+    preco= yf.download(ticker_selecionado + '.SA', period="2y")  # Obtendo o preço de fechamento
     preco.columns = preco.columns.get_level_values(0) #Organiza o yf para formato correto
  
     
@@ -293,8 +293,10 @@ def dash_operacional():
     fig.add_trace(go.Scatter(x=preco.index, y=preco['Close'], mode='lines', name='Preço'))
     fig.add_trace(go.Scatter(x=preco.index, y=preco["MM50"], mode='lines', name='Média Móvel 50'))
     fig.add_trace(go.Scatter(x=preco.index, y=preco["MM200"], mode='lines', name='Média Móvel 200'))
-    fig.update_layout(title=f'Gráfico de Preço com Médias Móveis - {ticker_selecionado}', xaxis_title='Data', yaxis_title='Preço')
+    fig.update_layout(title=f'Gráfico de Preço com Médias Móveis - {ticker_selecionado}',
+                  xaxis_title='Data', yaxis_title='Preço')
     st.plotly_chart(fig, use_container_width=True)
+
 
     st.markdown('---')
 
@@ -317,6 +319,7 @@ def dash_operacional():
     st.write(f"Ação escolhida: **{ticker_selecionado}**")
 
 main()
+
 
 
 
